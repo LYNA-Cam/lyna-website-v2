@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lexend, Lora } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layouts/header/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lora = Lora({
+  variable: "--lora",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lexend = Lexend({
+  variable: "--lexend",
   subsets: ["latin"],
 });
 
@@ -24,10 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${lora.variable} ${lexend.variable} antialiased`}>
+        <Header />
+        <div className="size-full flex pt-[calc(64px+2*20px)]">{children}</div>
       </body>
     </html>
   );
