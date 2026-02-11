@@ -6,6 +6,7 @@ import Header from "@/components/layouts/header/Header";
 const lora = Lora({
   variable: "--lora",
   subsets: ["latin"],
+  style:["normal","italic"]
 });
 
 const lexend = Lexend({
@@ -26,8 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lora.variable} ${lexend.variable} antialiased`}>
-        <Header />
-        <div className="size-full flex pt-[calc(64px+2*20px)]">{children}</div>
+        {children}
       </body>
     </html>
   );

@@ -1,0 +1,48 @@
+import Card from "@/components/layouts/features-section/Card";
+import Typography from "@/components/ui/Typography";
+
+const FeaturesSection = () => {
+  return (
+    <section className="relative py-20 w-full">
+      <div className="relative w-full max-w-[1400px] mx-auto flex flex-col gap-y-20 items-center justify-center">
+        <div className="relative flex flex-col gap-y-4 text-center">
+          <Typography
+            variant={"subtitle"}
+            className="font-light text-primary font-lexend uppercase"
+          >
+            Features
+          </Typography>
+          <Typography
+            as="h2"
+            variant={"h2"}
+            className="text-font font-medium font-lora"
+          >
+            Everything you need
+          </Typography>
+        </div>
+        <div className="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-10">
+          <Card
+            image="/card-1.png"
+            subImage="/card-chart.png"
+            title="Energy Balance"
+            caption="Monitor your energy availability in real-time to prevent burnout."
+          />
+          <Card
+            image="/card-2.png"
+            subImage="/card-curve.png"
+            title="Pattern Recognition"
+            caption="Observe trends in your data so you can predict your next optimum performance window."
+          />
+          <Card
+            image="/card-3.png"
+            subImage="/card-table.png"
+            title="Nutrition Scanner"
+            caption="Track essential nutrients for overall wellness at every stage of your life."
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FeaturesSection;

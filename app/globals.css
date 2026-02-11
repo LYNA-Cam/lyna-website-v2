@@ -8,6 +8,8 @@
   --black: #131400;
   --white: #f9f9fb;
   --blue: #e4f3ff;
+  --light-gray: #e6e0eb80;
+  --grey: #8c8198;
 }
 
 @media screen and (max-width: 375px) {
@@ -21,6 +23,8 @@
   --color-black: var(--black);
   --color-white: var(--white);
   --color-blue: var(--blue);
+  --color-light-gray: var(--light-gray);
+  --color-gray: var(--gray);
   --font-lora: var(--lora);
   --font-lexend: var(--lexend);
 }
@@ -34,10 +38,12 @@
   }
 }
 
-.gradient-1 {
-  @apply bg-linear-to-r from-[#E4F2FD] to-[#F7F7FA];
-}
+@layer components {
+  .gradient-1 {
+    background: linear-gradient(to right, #e4f2fd, #f7f7fa);
+  }
 
-.gradient-2 {
-  @apply bg-linear-to-r from-[#C2ACFD] to-[#F2EFFA];
+  .gradient-2 {
+    background: linear-gradient(to right, #c2acfd, #f2effa);
+  }
 }
