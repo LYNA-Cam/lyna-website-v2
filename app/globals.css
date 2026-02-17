@@ -9,7 +9,6 @@
   --white: #f9f9fb;
   --blue: #e4f3ff;
   --light-gray: #e6e0eb80;
-  --grey: #8c8198;
 }
 
 @media screen and (max-width: 375px) {
@@ -24,7 +23,7 @@
   --color-white: var(--white);
   --color-blue: var(--blue);
   --color-light-gray: var(--light-gray);
-  --color-gray: var(--gray);
+  --color-gray: #8c8198;
   --font-lora: var(--lora);
   --font-lexend: var(--lexend);
 }

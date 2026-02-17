@@ -180,7 +180,9 @@ function CarouselPrevious({
     <button
       data-slot="carousel-previous"
       className={cn(
-        "rounded-full absolute touch-manipulation z-2 gradient-2 ac size-[48px] flex items-center justify-center border border-light-gray disabled:opacity-20",
+        "rounded-full absolute touch-manipulation z-2 bg-white ac size-[48px] flex items-center justify-center border border-light-gray",
+        "disabled:opacity-60",
+        "active:bg-linear-to-r active:from-[#C2ACFD] active:to-[#F2EFFA]",
         orientation === "horizontal"
           ? "top-1/2 left-4 md:left-8 lg:left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -189,6 +191,10 @@ function CarouselPrevious({
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
+      style={{
+        boxShadow:
+          "0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1)",
+      }}
     >
       <ChevronLeftIcon className="cn-rtl-flip" />
       <span className="sr-only">Previous slide</span>
@@ -203,7 +209,9 @@ function CarouselNext({ className, ...props }: React.ComponentProps<"button">) {
     <button
       data-slot="carousel-next"
       className={cn(
-        "rounded-full absolute touch-manipulation z-2 gradient-2 size-[48px] flex items-center justify-center border border-light-gray disabled:opacity-20",
+        "rounded-full absolute touch-manipulation z-2 size-[48px] bg-white flex items-center justify-center border border-light-gray",
+        "disabled:opacity-60",
+        "active:bg-linear-to-r active:from-[#C2ACFD] active:to-[#F2EFFA]",
         orientation === "horizontal"
           ? "top-1/2 right-4 md:right-8 lg:right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -212,6 +220,10 @@ function CarouselNext({ className, ...props }: React.ComponentProps<"button">) {
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
+      style={{
+        boxShadow:
+          "0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1)",
+      }}
     >
       <ChevronRightIcon className="cn-rtl-flip" />
       <span className="sr-only">Next slide</span>
