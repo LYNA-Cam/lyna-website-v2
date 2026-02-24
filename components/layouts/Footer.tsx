@@ -28,6 +28,8 @@ const Footer = () => {
               key={`footer-link-${index}`}
               as={Link}
               href={href}
+               target="_blank"
+              rel="noopener noreferrer"
               variant={"subtitle"}
               className="font-light font-lexend text-gray uppercase hover:underline"
             >
