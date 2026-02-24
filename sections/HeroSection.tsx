@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import Typography from "@/components/ui/Typography";
 import Link from "next/link";
+import { SITE_LINKS } from "@/lib/constants";
 
 const HeroSection = () => {
   return (
@@ -43,7 +44,7 @@ const HeroSection = () => {
         </Typography>
       </div>
       <div className="gap-y-4 flex-col items-center justify-center mt-auto mb-4 hidden md:flex">
-        <Button as={Link} href={"/"}>
+        <Button as={Link} href={SITE_LINKS.TALLY_FORM} target="_blank" rel="noopener noreferrer">
           <Typography className="font-lexend text-white group-active:text-font">
             Join the Founding Athletes
           </Typography>
@@ -57,7 +58,7 @@ const HeroSection = () => {
         </Typography>
       </div>
       <div className="flex md:hidden mt-auto mb-[60px] flex-col gap-y-4 items-center justify-center">
-        <Button as={Link} href={"/"} className="w-max">
+        <Button as={Link} href={SITE_LINKS.TALLY_FORM} target="_blank" rel="noopener noreferrer" className="w-max">
           <Typography className="font-lexend text-white group-active:text-font">
             Early Access
           </Typography>

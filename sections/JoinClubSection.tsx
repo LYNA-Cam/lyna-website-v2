@@ -1,6 +1,8 @@
 import Button from "@/components/ui/Button";
 import Typography from "@/components/ui/Typography";
+import Link from "next/link";
 import React from "react";
+import { SITE_LINKS } from "@/lib/constants";
 
 const JoinClubSection = () => {
   return (
@@ -23,7 +25,7 @@ const JoinClubSection = () => {
             Help us shape the future of LYNA.
           </span>
         </Typography>
-        <Button>
+        <Button as={Link} href={SITE_LINKS.TALLY_FORM} target="_blank" rel="noopener noreferrer">
           <Typography
             as="span"
             variant={"button"}

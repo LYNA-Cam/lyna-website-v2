@@ -5,16 +5,14 @@ import Typography from "@/components/ui/Typography";
 import Image from "next/image";
 import Link from "next/link";
 import { createPortal } from "react-dom";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect, startTransition } from "react";
+
+import { SITE_LINKS } from "@/lib/constants";
 
 type LINK = { label: string; href: string };
 
-const links: LINK[] = [
-  { label: "How it works", href: "" },
-  { label: "Features", href: "" },
-  { label: "Why LYNA", href: "" },
-];
+const links = SITE_LINKS.NAV;
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -89,7 +87,7 @@ const Header = () => {
                 </Typography>
               ))}
             </nav>
-            <Button as={Link} href="" className="rounded-full px-8">
+            <Button as={Link} href={SITE_LINKS.TALLY_FORM} target="_blank" rel="noopener noreferrer" className="rounded-full px-8">
               <Typography
                 variant={"button"}
                 className="text-white font-lexend group-active:text-font"
@@ -128,7 +126,7 @@ const Header = () => {
             </Typography>
           ))}
         </nav>
-        <Button as={Link} href={""} className="hidden md:flex">
+        <Button as={Link} href={SITE_LINKS.TALLY_FORM} target="_blank" rel="noopener noreferrer" className="hidden md:flex">
           <Typography
             variant={"button"}
             className="text-white font-lexend group-active:text-font"
