@@ -25,7 +25,7 @@ const Card = ({
             alt=""
             width={332}
             height={259}
-            className="w-full flex-1 object-cover"
+            className="w-full flex-1"
           />
         </div>
         <Typography

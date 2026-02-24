@@ -7,6 +7,11 @@ import { InformationSubsection } from "@/components/ui/InformationSubsection";
 import { InformationCallout } from "@/components/ui/InformationCallout";
 import { InformationLink } from "@/components/ui/InformationLink";
 import TextBold from "@/components/ui/TextBold";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+};
 
 const PrivacyPolicy = () => {
   return (

@@ -45,4 +45,10 @@
   .gradient-2 {
     background: linear-gradient(to right, #c2acfd, #f2effa);
   }
+  .gradient-text-2 {
+    background: linear-gradient(to right, #c2acfd, #f2effa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }

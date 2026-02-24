@@ -61,7 +61,7 @@ const Header = () => {
           {/* Header: logo + close */}
           <div className="relative z-10 flex items-center justify-between px-6 py-5">
             <Link href="/" className="relative h-10 w-[142px]" onClick={() => setMenuOpen(false)}>
-              <Image src="/nav-logo.png" alt="LYNA" fill className="object-contain object-left" />
+              <Image src="/Logo_primary-big.png" alt="LYNA" fill className="object-contain object-left" />
             </Link>
             <button
               type="button"
@@ -109,7 +109,7 @@ const Header = () => {
       <div className="relative container max-w-[1720px] h-[64px] flex justify-between mx-auto px-4">
         <div className="relative h-full w-[200px]">
           <Image
-            src={"/nav-logo.png"}
+            src={"/Logo_primary-big.png"}
             alt=""
             fill
             className="size-full object-contain"

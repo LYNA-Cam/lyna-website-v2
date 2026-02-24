@@ -32,7 +32,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="flex-1 flex justify-center items-center max-md:order-first">
-          <Image src={"/nav-logo.png"} alt="" width={142} height={24} />
+          <Image src={"/Logo_primary-big.png"} alt="" width={142} height={24} />
         </div>
         <div className="flex-1 flex items-center gap-x-6 justify-end max-md:order-1 max-md:mt-6">
           <Link href={"/"}>

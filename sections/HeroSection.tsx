@@ -1,7 +1,6 @@
 import Button from "@/components/ui/Button";
 import Typography from "@/components/ui/Typography";
 import Link from "next/link";
-import React from "react";
 
 const HeroSection = () => {
   return (
@@ -12,7 +11,7 @@ const HeroSection = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        className="absolute inset-0 w-full h-full -rotate-y-180 -z-1 bg-position-[20%] md:bg-center"
+        className="absolute inset-0 w-full h-full -rotate-y-180 -z-1 bg-position-[12.5%] md:bg-center"
       />
       <div className="ml-4 mt-8 md:mt-20 md:ml-20 pr-8 gap-y-6 flex flex-col h-max max-w-2xl">
         <Typography
@@ -27,7 +26,10 @@ const HeroSection = () => {
           variant={"body-lg"}
           className="text-white font-light font-lexend hidden md:block"
         >
-          LYNA forecasts your energy cycles and automates your fueling to unlock
+          LYNA forecasts your energy cycles,
+          <br />
+          automates fueling to unlock
+          <br />
           peak performance
         </Typography>
         <Typography
@@ -35,7 +37,9 @@ const HeroSection = () => {
           variant={"h2"}
           className="text-white font-lora block md:hidden font-semibold"
         >
-          Turn Your Body Into a Superpower
+          Turn Your Body
+          <br />
+          Into a Superpower
         </Typography>
       </div>
       <div className="gap-y-4 flex-col items-center justify-center mt-auto mb-4 hidden md:flex">

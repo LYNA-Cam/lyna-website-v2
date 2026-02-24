@@ -30,7 +30,7 @@ const UserFeedbackSection = () => {
               quot="I want to optimize my performance and long-term health
                   by understanding how my menstrual cycle impacts my training,
                   energy and recovery, so I can stop guessing and start reaching
-                  my full potential"
+                  my full potential."
               avatar="/avatar-1.png"
               name="Anna • Athlete"
               job="Founding Member"
@@ -62,7 +62,7 @@ const UserFeedbackSection = () => {
             <UserQuot
               quot="I want to optimize my performance and long-term health
                   by understanding how my menstrual cycle impacts my training,
-                  energy and recovery"
+                  energy and recovery."
               avatar="/avatar-1.png"
               name="Anna • Athlete"
               job="Founding Member"

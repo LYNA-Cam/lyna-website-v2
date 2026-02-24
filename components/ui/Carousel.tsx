@@ -54,7 +54,7 @@ function Carousel({
       ...opts,
       axis: orientation === "horizontal" ? "x" : "y",
     },
-    plugins
+    plugins,
   );
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
@@ -83,7 +83,7 @@ function Carousel({
         scrollNext();
       }
     },
-    [scrollPrev, scrollNext]
+    [scrollPrev, scrollNext],
   );
 
   React.useEffect(() => {
@@ -143,7 +143,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
         className={cn(
           "flex",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
-          className
+          className,
         )}
         {...props}
       />
@@ -162,7 +162,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
         orientation === "horizontal" ? "pl-4" : "pt-4",
-        className
+        className,
       )}
       {...props}
     />
@@ -181,12 +181,13 @@ function CarouselPrevious({
       data-slot="carousel-previous"
       className={cn(
         "rounded-full absolute touch-manipulation z-2 bg-white ac size-[48px] flex items-center justify-center border border-light-gray",
-        "disabled:opacity-60",
-        "active:bg-linear-to-r active:from-[#C2ACFD] active:to-[#F2EFFA]",
+        "disabled:opacity-60 disabled:cursor-not-allowed",
+        canScrollPrev &&
+          "active:bg-linear-to-r active:from-[#C2ACFD] active:to-[#F2EFFA]",
         orientation === "horizontal"
           ? "top-1/2 left-4 md:left-8 lg:left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
+        className,
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
@@ -196,7 +197,9 @@ function CarouselPrevious({
           "0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <ChevronLeftIcon className="cn-rtl-flip" />
+      <ChevronLeftIcon
+        className={cn("cn-rtl-flip", !canScrollPrev && "gradient-text-2")}
+      />
       <span className="sr-only">Previous slide</span>
     </button>
   );
@@ -210,12 +213,13 @@ function CarouselNext({ className, ...props }: React.ComponentProps<"button">) {
       data-slot="carousel-next"
       className={cn(
         "rounded-full absolute touch-manipulation z-2 size-[48px] bg-white flex items-center justify-center border border-light-gray",
-        "disabled:opacity-60",
-        "active:bg-linear-to-r active:from-[#C2ACFD] active:to-[#F2EFFA]",
+        "disabled:opacity-60 disabled:cursor-not-allowed",
+        canScrollNext &&
+          "active:bg-linear-to-r active:from-[#C2ACFD] active:to-[#F2EFFA]",
         orientation === "horizontal"
           ? "top-1/2 right-4 md:right-8 lg:right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
+        className,
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
@@ -225,7 +229,9 @@ function CarouselNext({ className, ...props }: React.ComponentProps<"button">) {
           "0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <ChevronRightIcon className="cn-rtl-flip" />
+      <ChevronRightIcon
+        className={cn("cn-rtl-flip", !canScrollNext && "gradient-text-2")}
+      />
       <span className="sr-only">Next slide</span>
     </button>
   );
@@ -261,7 +267,7 @@ function Dots() {
           className={cn(
             "relative w-[8px] h-[8px] bg-[#7362844D] rounded-full transition-[width] duration-300",
             current == index && "bg-primary w-8",
-            current != index && "hover:scale-125"
+            current != index && "hover:scale-125",
           )}
         />
       ))}

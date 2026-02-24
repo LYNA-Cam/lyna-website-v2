@@ -7,7 +7,12 @@ import TextBold from "@/components/ui/TextBold";
 import Typography from "@/components/ui/Typography";
 import { LastUpdated } from "@/components/ui/lastUpdate";
 import { Paragraph } from "@/components/ui/paragraph";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy",
+};
 
 type TableItem = {
   cookieName: string;
@@ -243,7 +248,7 @@ const CookiePolicy = () => {
             {tableItems.map(
               (
                 { cookieName, category, purpose, duration, provider },
-                index
+                index,
               ) => (
                 <tr key={`item-${index}`}>
                   <th className="pl-6">
@@ -262,7 +267,7 @@ const CookiePolicy = () => {
                     <Paragraph spacing={"none"}>{provider}</Paragraph>
                   </th>
                 </tr>
-              )
+              ),
             )}
           </tbody>
         </table>

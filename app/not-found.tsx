@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import Typography from "@/components/ui/Typography";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,12 +17,17 @@ const links: LINK[] = [
   { label: "Data Safety", href: "/data-safety" },
 ];
 
+export const metadata: Metadata = {
+  title:"Not found"
+}
+
+
 const NotFoundPage = () => {
   return (
     <div className="min-h-screen py-[60px] px-[100px] w-full">
       <div className="w-full grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col">
-          <Image src={"/nav-logo.png"} alt="" width={240} height={40} />
+          <Image src={"/Logo_primary-big.png"} alt="" width={240} height={40} />
           <div className="my-auto">
             <span className="text-font text-[128px] font-lexend font-extralight leading-[120%]">
               404

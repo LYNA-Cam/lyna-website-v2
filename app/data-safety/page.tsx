@@ -5,7 +5,12 @@ import { InformationTitle } from "@/components/ui/InformationTitle";
 import TextBold from "@/components/ui/TextBold";
 import { LastUpdated } from "@/components/ui/lastUpdate";
 import { Paragraph } from "@/components/ui/paragraph";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Data Safety",
+};
 
 const DataSafety = () => {
   return (

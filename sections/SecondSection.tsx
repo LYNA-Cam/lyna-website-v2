@@ -20,22 +20,22 @@ const images = [
 
 const steps = [
   {
-    title: "Log Your Activity:",
+    title: "Log Your Activity",
     caption:
       "tell LYNA your output - from high-intensity training to active sports",
   },
   {
-    title: "Track Nutrition:",
+    title: "Track Nutrition",
     caption:
       "scan your meals to instantly calculate energy and essential nutrients.",
   },
   {
-    title: "Forecast Your Peak:",
+    title: "Forecast Your Peak",
     caption:
       "know your body’s limits by aligning your training with your natural cycle.",
   },
   {
-    title: "Adapt in Real-Time:",
+    title: "Adapt in Real-Time",
     caption:
       "energy budget updates instantly so you always know if you're fueled for your next move.",
   },
@@ -63,7 +63,7 @@ const SecondSection = () => {
         </div>
         <Carousel className="grid grid-cols-1 md:grid-cols-2 gap-y-4">
           <MobileSteps />
-          <div className="relative">
+          <div className="relative max-w-lg">
             <CarouselPrevious />
             <CarouselContent>
               {images.map((url, index) => (
@@ -71,7 +71,7 @@ const SecondSection = () => {
                   key={`image-${index}`}
                   className="basis-full justify-center flex"
                 >
-                  <Image src={url} alt="" width={500} height={500} />
+                  <Image src={url} alt="" width={400} height={400} />
                 </CarouselItem>
               ))}
             </CarouselContent>
