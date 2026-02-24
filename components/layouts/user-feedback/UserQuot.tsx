@@ -17,26 +17,26 @@ const UserQuot = ({
       <Typography
         as={"blockquote"}
         variant={"h3-italic"}
-        className="font-lora text-pretty text-center"
+        className="font-lora text-pretty text-center max-md:text-[14px]"
       >
         &quot;{quot}
       </Typography>
       <div className="relative flex items-center justify-center gap-x-3">
         <Avatar size="lg">
-          <AvatarImage src={avatar} />
+          <AvatarImage src={avatar} className="object-cover object-top" />
         </Avatar>
         <div className="flex flex-col">
           <Typography
             as="span"
-            variant={"body-base"}
-            className="font-lexend font-extralight text-primary"
+            variant={"button"}
+            className="font-lexend text-primary"
           >
             {name}
           </Typography>
           <Typography
             as="span"
             variant={"body-sm"}
-            className="font-lexend font-light text-black"
+            className="font-lexend"
           >
             {job}
           </Typography>

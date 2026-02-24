@@ -4,10 +4,10 @@ import React from "react";
 
 const ThirdSection = () => {
   return (
-    <section className="relative gradient-1 py-34 flex items-center justify-center">
+    <section className="relative gradient-1 py-12 md:py-34 flex items-center justify-center">
       <Typography
         variant={"h1"}
-        className="max-w-3xl text-center font-light font-lexend"
+        className="max-w-3xl text-center font-light font-lexend max-md:text-2xl"
       >
         Own{" "}
         <span className="text-secondary">
@@ -16,8 +16,8 @@ const ThirdSection = () => {
           superpower
         </span>{" "}
         for every way{" "}
-        <span className="flex items-center justify-center gap-x-4">
-          you <Image src={"/logo.svg"} alt="" width={112} height={112} /> move
+        <span className="flex items-center justify-center gap-x-2">
+          you <Image src={"/logo.svg"} alt="" width={112} height={112} className="max-md:size-[44px]"/> move
         </span>
       </Typography>
     </section>

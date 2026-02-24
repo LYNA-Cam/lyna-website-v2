@@ -3,9 +3,9 @@ import Typography from "@/components/ui/Typography";
 
 const FeaturesSection = () => {
   return (
-    <section className="relative py-20 w-full">
-      <div className="relative w-full max-w-[1400px] mx-auto flex flex-col gap-y-20 items-center justify-center">
-        <div className="relative flex flex-col gap-y-4 text-center">
+    <section className="relative py-12 md:py-20 w-full">
+      <div className="relative w-full max-w-[1400px] mx-auto flex flex-col px-4 gap-y-8 md:gap-y-20 items-center justify-center">
+        <div className="relative flex flex-col gap-y-2 md:gap-y-4 text-center">
           <Typography
             variant={"subtitle"}
             className="font-light text-primary font-lexend uppercase"
@@ -20,7 +20,7 @@ const FeaturesSection = () => {
             Everything you need
           </Typography>
         </div>
-        <div className="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-10">
+        <div className="relative grid grid-cols-1 lg:grid-cols-3 w-full gap-10">
           <Card
             image="/card-1.png"
             subImage="/card-chart.png"

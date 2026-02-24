@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import React from "react";
 
@@ -42,7 +43,7 @@ const Typography = <E extends React.ElementType = "span">({
   const Component = as || "span";
 
   return (
-    <Component className={typography({ variant, className })} {...props}>
+    <Component className={cn(typography({ variant, className }))} {...props}>
       {children}
     </Component>
   );

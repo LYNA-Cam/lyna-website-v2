@@ -6,7 +6,11 @@ const JoinClubSection = () => {
   return (
     <section className="relative py-20">
       <div className="flex flex-col items-center justify-center px-4 gap-4 max-w-2xl mx-auto">
-        <Typography as="h2" variant={"h2"} className="font-medium font-lora">
+        <Typography
+          as="h2"
+          variant={"h2"}
+          className="md:font-medium font-semibold font-lora"
+        >
           Join the club
         </Typography>
         <Typography
@@ -14,10 +18,20 @@ const JoinClubSection = () => {
           variant={"body-lg"}
           className="font-lexend font-light text-center"
         >
-          We are building the future of female performance Help us shape the
-          future of LYNA.
+          We are building the future of female performance{" "}
+          <span className="hidden md:block">
+            Help us shape the future of LYNA.
+          </span>
         </Typography>
-        <Button><Typography as="span" variant={"button"} className="text-white font-lexend">Apply now</Typography></Button>
+        <Button>
+          <Typography
+            as="span"
+            variant={"button"}
+            className="text-white font-lexend"
+          >
+            Apply now
+          </Typography>
+        </Button>
       </div>
     </section>
   );
