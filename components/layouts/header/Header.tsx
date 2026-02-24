@@ -103,16 +103,23 @@ const Header = () => {
   );
 
   return (
-    <header className="fixed w-full inset-0 py-5 h-min z-50 bg-white/40 backdrop-blur-md border-b border-white/20">
+    <header className="fixed w-full top-0 left-0 py-5 h-min z-50 bg-white/40 backdrop-blur-md border-b border-white/20">
       <div className="relative container max-w-[1720px] h-[64px] flex justify-between mx-auto px-4">
-        <div className="relative h-full w-[200px]">
+        <Link
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="relative h-full w-[200px]"
+        >
           <Image
             src={"/Logo_primary-big.png"}
             alt=""
             fill
             className="size-full object-contain"
           />
-        </div>
+        </Link>
         <nav className="items-center justify-center gap-x-8 hidden md:flex">
           {links.map(({ label, href }, index) => (
             <Typography

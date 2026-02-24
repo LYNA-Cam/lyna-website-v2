@@ -1,6 +1,10 @@
+"use client";
+
 import Typography from "../ui/Typography";
 import Link from "next/link";
 import Image from "next/image";
+
+import { SITE_LINKS } from "@/lib/constants";
 
 type LINK = {
   label: string;
@@ -31,15 +35,22 @@ const Footer = () => {
             </Typography>
           ))}
         </div>
-        <div className="flex-1 flex justify-center items-center max-md:order-first">
+        <Link
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex-1 flex justify-center items-center max-md:order-first"
+        >
           <Image src={"/Logo_primary-big.png"} alt="" width={142} height={24} />
-        </div>
+        </Link>
         <div className="flex-1 flex items-center gap-x-6 justify-end max-md:order-1 max-md:mt-6">
-          <Link href={"/"}>
-            <Image src={"/instagram.png"} alt="" width={20} height={20} />
+          <Link href={SITE_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer">
+            <Image src={"/instagram.svg"} alt="" width={20} height={20} />
           </Link>
-          <Link href={"/"}>
-            <Image src={"/tiktok.png"} alt="" width={20} height={20} />
+          <Link href={SITE_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
+            <Image src={"/tiktok.svg"} alt="" width={20} height={20} />
           </Link>
         </div>
       </div>

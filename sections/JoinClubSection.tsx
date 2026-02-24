@@ -21,9 +21,9 @@ const JoinClubSection = () => {
           className="font-lexend font-light text-center"
         >
           We are building the future of female performance{" "}
-          <span className="hidden md:block">
+          {/* <span className="hidden md:block">
             Help us shape the future of LYNA.
-          </span>
+          </span> */}
         </Typography>
         <Button as={Link} href={SITE_LINKS.TALLY_FORM} target="_blank" rel="noopener noreferrer">
           <Typography

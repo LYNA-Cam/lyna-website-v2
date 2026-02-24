@@ -10,6 +10,6 @@ export const SITE_LINKS = {
   ],
   
   // Social Links (Placeholders for now)
-  INSTAGRAM: "https://instagram.com/lyna",
-  TWITTER: "https://twitter.com/lyna",
+  INSTAGRAM: "https://www.instagram.com/lynacamofficial",
+  TWITTER: "https://www.tiktok.com/@lynacam.de",
 } as const;

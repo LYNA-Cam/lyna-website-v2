@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import Typography from "@/components/ui/Typography";
+import { SITE_LINKS } from "@/lib/constants";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -85,11 +86,11 @@ const NotFoundPage = () => {
           ))}
         </div>
         <div className="flex items-center gap-x-6 justify-end">
-          <Link href={"/"}>
-            <Image src={"/instagram.png"} alt="" width={20} height={20} />
+          <Link href={SITE_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer">
+            <Image src={"/instagram.svg"} alt=""  width={20} height={20} />
           </Link>
-          <Link href={"/"}>
-            <Image src={"/tiktok.png"} alt="" width={20} height={20} />
+          <Link href={SITE_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
+            <Image src={"/tiktok.svg"} alt="" width={20} height={20} />
           </Link>
         </div>
       </footer>
