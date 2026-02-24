@@ -9,7 +9,7 @@ import Footer from "@/components/layouts/Footer";
 
 export default function Home() {
   return (
-    <div className="relative h-full pt-[calc(64px+2*20px)]">
+    <div className="relative h-full">
       <Header />
       <HeroSection />
       <SecondSection />

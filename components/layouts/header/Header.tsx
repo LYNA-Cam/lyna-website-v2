@@ -103,7 +103,7 @@ const Header = () => {
   );
 
   return (
-    <header className="fixed w-full inset-0 py-5 h-min z-10 bg-white">
+    <header className="fixed w-full inset-0 py-5 h-min z-50 bg-white/40 backdrop-blur-md border-b border-white/20">
       <div className="relative container max-w-[1720px] h-[64px] flex justify-between mx-auto px-4">
         <div className="relative h-full w-[200px]">
           <Image

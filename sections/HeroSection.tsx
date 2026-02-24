@@ -14,7 +14,7 @@ const HeroSection = () => {
         }}
         className="absolute inset-0 w-full h-full -rotate-y-180 -z-1 bg-position-[12.5%] md:bg-center"
       />
-      <div className="ml-4 mt-8 md:mt-20 md:ml-20 pr-8 gap-y-6 flex flex-col h-max max-w-2xl">
+      <div className="ml-4 mt-24 md:mt-32 md:ml-20 pr-8 gap-y-6 flex flex-col h-max max-w-2xl">
         <Typography
           as="h1"
           variant={"h1"}
