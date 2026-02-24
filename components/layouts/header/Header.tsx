@@ -120,9 +120,9 @@ const Header = () => {
         borderBottomColor: isScrolled ? "rgba(233, 226, 231, 1)" : "rgba(233, 226, 231, 0)",
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed w-full top-0 left-0 py-5 h-min z-50 border-b"
+      className="fixed w-full top-0 left-0 py-3 md:py-5 h-min z-50 border-b"
     >
-      <div className="relative container max-w-[1720px] h-[64px] flex justify-between mx-auto px-4">
+      <div className="relative container max-w-[1720px] h-[48px] md:h-[64px] flex justify-between mx-auto px-4">
         <Link
           href="/"
           onClick={(e) => {
