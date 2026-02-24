@@ -23,14 +23,12 @@ const Button = <E extends React.ElementType = "button">({
       className={cn(
         "h-[64px] py-3 px-8 rounded-[100px]",
         "inline-flex items-center justify-center",
-        "bg-primary shadow-[0_4px_6px_-10px_rgba(0,0,0,0.1)]",
-        "hover:bg-secondary active:bg-accent group transition-colors duration-300",
+        "bg-primary shadow-lg",
+        "hover:bg-secondary hover:scale-[1.02] hover:shadow-xl",
+        "active:scale-[0.98] active:shadow-inner",
+        "group transition-all duration-300 ease-out",
         className
       )}
-      style={{
-        boxShadow:
-          "0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1)",
-      }}
       {...props}
     >
       {children}

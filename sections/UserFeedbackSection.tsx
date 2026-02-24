@@ -13,10 +13,18 @@ const UserFeedbackSection = () => {
   return (
     <section id="why-lyna" className="relative gradient-1 py-25 flex flex-col gap-y-4 items-center justify-center scroll-mt-20">
       <div className="flex flex-col items-center gap-y-4">
+        
         <Typography
           as="span"
           variant={"subtitle"}
           className="font-lexend font-light uppercase text-primary"
+        >
+          Why LYNA
+        </Typography>
+        <Typography
+          as="h2"
+          variant={"h2"}
+          className="text-font font-medium font-lora"
         >
           Early User Feedback
         </Typography>
