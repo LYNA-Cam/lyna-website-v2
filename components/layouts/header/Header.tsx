@@ -111,7 +111,7 @@ const Header = () => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="relative h-full w-[200px]"
+          className="relative h-full w-[140px] md:w-[200px]"
         >
           <Image
             src={"/Logo_primary-big.png"}

@@ -44,7 +44,7 @@ const steps = [
 
 const SecondSection = () => {
   return (
-    <section className="relative py-12 md:py-20 w-full">
+    <section id="how-it-works" className="relative py-12 md:py-20 w-full scroll-mt-20">
       <div className="relative w-full max-w-[1400px] mx-auto flex flex-col gap-y-2 md:gap-y-20 items-center justify-center">
         <div className="relative flex flex-col gap-y-2 md:gap-y-4 text-center">
           <Typography

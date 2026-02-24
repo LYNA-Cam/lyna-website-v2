@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   icons: "/logo.svg",
 };
 
+import ScrollToTop from "@/components/utils/ScrollToTop";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${lora.variable} ${lexend.variable} antialiased`}>
+      <body
+        className={`${lora.variable} ${lexend.variable} antialiased`}
+        suppressHydrationWarning
+      >
+        <ScrollToTop />
         {children}
       </body>
     </html>
