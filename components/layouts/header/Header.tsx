@@ -121,8 +121,12 @@ const Header = () => {
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="fixed w-full top-0 left-0 py-3 md:py-5 h-min z-50 border-b"
+      suppressHydrationWarning
     >
-      <div className="relative container max-w-[1720px] h-[48px] md:h-[64px] flex justify-between mx-auto px-4">
+      <div 
+        className="relative container max-w-[1720px] h-[48px] md:h-[64px] flex justify-between mx-auto px-4"
+        suppressHydrationWarning
+      >
         <Link
           href="/"
           onClick={(e) => {

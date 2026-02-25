@@ -43,7 +43,11 @@ const Typography = <E extends React.ElementType = "span">({
   const Component = as || "span";
 
   return (
-    <Component className={cn(typography({ variant, className }))} {...props}>
+    <Component
+      className={cn(typography({ variant, className }))}
+      suppressHydrationWarning
+      {...props}
+    >
       {children}
     </Component>
   );

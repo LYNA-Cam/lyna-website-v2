@@ -22,8 +22,8 @@ const Footer = () => {
   return (
     <footer className="relative w-full max-w-[1720px] mx-auto border-t border-[#E9E2E7] py-12 gap-y-6 flex flex-col">
       <div className="relative w-full flex flex-col gap-y-4">
-        <div className="flex justify-between items-center max-md:flex-col max-md:gap-y-10">
-          <div className="flex-1 flex gap-x-6 max-md:flex-col gap-y-4 max-md:items-center">
+        <div className="flex justify-between items-center max-md:flex-col max-md:gap-y-10 min-h-[48px]">
+          <div className="flex-1 flex gap-x-6 max-md:flex-col gap-y-4 max-md:items-center items-center">
             {links.map(({ label, href }, index) => (
               <Typography
                 key={`footer-link-${index}`}
@@ -32,7 +32,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 variant={"subtitle"}
-                className="font-light font-lexend text-gray uppercase hover:underline"
+                className="font-light font-lexend text-gray uppercase hover:underline leading-none flex items-center"
               >
                 {label}
               </Typography>
@@ -44,7 +44,7 @@ const Footer = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="flex-1 flex justify-center items-center"
+            className="flex-1 flex justify-center items-center h-full"
           >
             <Image
               src={"/Logo_primary-big.png"}
@@ -54,11 +54,12 @@ const Footer = () => {
               className="object-contain"
             />
           </Link>
-          <div className="flex-1 flex items-center gap-x-6 justify-end max-md:justify-center">
+          <div className="flex-1 flex items-center gap-x-6 justify-end max-md:justify-center h-full">
             <Link
               href={SITE_LINKS.INSTAGRAM}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center"
             >
               <Image src={"/instagram.svg"} alt="" width={24} height={24} />
             </Link>
@@ -66,6 +67,7 @@ const Footer = () => {
               href={SITE_LINKS.TWITTER}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center"
             >
               <Image src={"/tiktok.svg"} alt="" width={22} height={24} />
             </Link>

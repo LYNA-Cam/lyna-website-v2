@@ -29,6 +29,7 @@ const Button = <E extends React.ElementType = "button">({
         "group transition-all duration-300 ease-out",
         className
       )}
+      suppressHydrationWarning
       {...props}
     >
       {children}
