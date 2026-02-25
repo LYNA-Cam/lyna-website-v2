@@ -180,12 +180,12 @@ function CarouselPrevious({
     <button
       data-slot="carousel-previous"
       className={cn(
-        "rounded-full absolute touch-manipulation z-2 bg-white ac size-[48px] flex items-center justify-center border border-light-gray",
+        "rounded-full absolute touch-manipulation z-2 bg-white/90 backdrop-blur-sm md:bg-white size-9 md:size-12 flex items-center justify-center border border-light-gray",
         "disabled:opacity-20",
         canScrollPrev &&
           "active:bg-linear-to-r active:from-[#C2ACFD] active:to-[#F2EFFA]",
         orientation === "horizontal"
-          ? "top-1/2 left-4 md:left-8 lg:left-12 -translate-y-1/2"
+          ? "top-1/2 left-2 md:left-8 lg:left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className,
       )}
@@ -212,12 +212,12 @@ function CarouselNext({ className, ...props }: React.ComponentProps<"button">) {
     <button
       data-slot="carousel-next"
       className={cn(
-        "rounded-full absolute touch-manipulation z-2 size-[48px] bg-white flex items-center justify-center border border-light-gray",
+        "rounded-full absolute touch-manipulation z-2 size-9 md:size-12 bg-white/90 backdrop-blur-sm md:bg-white flex items-center justify-center border border-light-gray",
         "disabled:opacity-20",
         canScrollNext &&
           "active:bg-linear-to-r active:from-[#C2ACFD] active:to-[#F2EFFA]",
         orientation === "horizontal"
-          ? "top-1/2 right-4 md:right-8 lg:right-12 -translate-y-1/2"
+          ? "top-1/2 right-2 md:right-8 lg:right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className,
       )}

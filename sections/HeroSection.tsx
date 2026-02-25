@@ -11,7 +11,7 @@ const HeroSection = () => {
         src="/hero-bg.jpg"
         alt=""
         fill
-        className="object-cover -rotate-y-180 -z-1 brightness-95 max-md:object-left"
+        className="object-cover -rotate-y-180 -z-1 brightness-95 max-md:object-[20%_center]"
         priority
         shimmerWidth={1920}
         shimmerHeight={1080}
