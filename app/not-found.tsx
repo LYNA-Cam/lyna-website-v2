@@ -25,71 +25,76 @@ export const metadata: Metadata = {
 
 const NotFoundPage = () => {
   return (
-    <div className="min-h-screen py-[60px] px-[100px] w-full">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2">
-        <div className="flex flex-col">
-          <OptimizedImage src={"/Logo_primary-big.png"} alt="" width={240} height={40} />
-          <div className="my-auto">
-            <span className="text-font text-[128px] font-lexend font-extralight leading-[120%]">
+    <div className="min-h-screen py-12 px-6 md:px-10 w-full max-w-[1720px] mx-auto flex flex-col">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-12 flex-1 items-center">
+        <div className="flex flex-col h-full">
+          <Link href="/">
+            <OptimizedImage src={"/Logo_primary-big.png"} alt="LYNA" width={142} height={24} />
+          </Link>
+          <div className="my-auto py-12 md:py-0 text-center md:text-left">
+            <span className="text-font text-8xl md:text-[128px] font-lexend font-extralight leading-none">
               404
             </span>
-            <div className="mt-12">
+            <div className="mt-8 md:mt-12">
               <Typography
                 as="h3"
                 variant={"h3"}
-                className="font-medium font-lora text-black"
+                className="font-medium font-lora text-font"
               >
                 This page didn’t load correctly
               </Typography>
               <Typography
                 as="p"
                 variant={"body-lg"}
-                className="font-light font-lexend text-black mt-6"
+                className="font-light font-lexend text-gray mt-4 md:mt-6"
               >
                 Try refreshing the page or return to the main experience.
               </Typography>
             </div>
-            <Button className="w-max mt-12">
+            <Button as={Link} href="/" className="w-full md:w-max mt-10 md:mt-12">
               <Typography
                 as="span"
                 variant={"button"}
-                className="text-white font-lexend"
+                className="text-white font-lexend uppercase tracking-widest"
               >
-                Join LYNA now
+                Back to track
               </Typography>
             </Button>
           </div>
         </div>
-        <div className="relative aspect-square">
+        <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden">
           <OptimizedImage src={"/not-found.jpg"} alt="" fill className="object-cover" />
         </div>
       </div>
-      <footer className="relative mt-[60px] py-4 flex gap-y-4 flex-wrap w-full justify-between before:content-['_'] before:absolute before:inset-0 before:h-px before:bg-linear-to-r before:from-[#c2acfd] before:to-[#f2effa]">
+
+      <footer className="relative mt-12 py-8 flex flex-col md:flex-row gap-y-6 w-full justify-between items-center border-t border-[#E9E2E7]">
         <Typography
           as="span"
           variant={"body-sm"}
-          className="font-lexend font-light text-gray"
+          className="font-lexend font-light text-gray order-3 md:order-1"
         >
           © {new Date().getFullYear()} LYNA. All rights reserved.
         </Typography>
-        <div className="relative flex flex-wrap gap-x-6 gap-y-2">
+        
+        <div className="relative flex flex-wrap justify-center gap-x-6 gap-y-2 order-1 md:order-2">
           {links.map(({ label, href }, index) => (
             <Typography
               key={`footer-link-${index}`}
               as={Link}
               href={href}
               variant={"subtitle"}
-              className="font-light font-lexend text-gray uppercase hover:underline"
+              className="font-light font-lexend text-gray uppercase hover:underline text-xs"
             >
               {label}
             </Typography>
           ))}
         </div>
-        <div className="flex items-center gap-x-6 justify-end">
-          <Link href={SITE_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer">
-            <OptimizedImage src={"/instagram.svg"} alt=""  width={20} height={20} />
+
+        <div className="flex items-center gap-x-6 order-2 md:order-3">
+          <Link href={SITE_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+            <OptimizedImage src={"/instagram.svg"} alt="" width={20} height={20} />
           </Link>
-          <Link href={SITE_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
+          <Link href={SITE_LINKS.TWITTER} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
             <OptimizedImage src={"/tiktok.svg"} alt="" width={20} height={20} />
           </Link>
         </div>
