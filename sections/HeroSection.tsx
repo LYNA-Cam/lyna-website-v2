@@ -20,7 +20,9 @@ const HeroSection = () => {
           variant={"h1"}
           className="text-white font-lora hidden md:block"
         >
-          Turn Your Body Into a Superpower
+          Turn Your Body Into a
+          <br />
+          Superpower
         </Typography>
         <Typography
           as="p"
