@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const UserFeedbackSection = () => {
   return (
-    <section id="why-lyna" className="relative gradient-1 py-25 flex flex-col gap-y-4 items-center justify-center scroll-mt-20">
+    <section id="early-user-feedback" className="relative gradient-1 py-25 flex flex-col gap-y-4 items-center justify-center scroll-mt-20">
       <div className="flex flex-col items-center gap-y-4">
         
         <Typography
@@ -19,15 +19,15 @@ const UserFeedbackSection = () => {
           variant={"subtitle"}
           className="font-lexend font-light uppercase text-primary"
         >
-          Why LYNA
+          Early User Feedback
         </Typography>
-        <Typography
+        {/* <Typography
           as="h2"
           variant={"h2"}
           className="text-font font-medium font-lora"
         >
           Early User Feedback
-        </Typography>
+        </Typography> */}
         <Image src={"/quotes.png"} alt="" width={40} height={40} className="max-md:size-[20px]"/>
       </div>
       <Carousel className="relative w-full max-w-7xl md:flex items-center hidden">
