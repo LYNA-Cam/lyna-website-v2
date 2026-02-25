@@ -20,7 +20,7 @@ const links: LINK[] = [
 
 const Footer = () => {
   return (
-    <footer className="relative w-full max-w-[1720px] mx-auto border-t border-[#E9E2E7] py-12 gap-y-6 flex flex-col">
+    <footer className="relative w-full max-w-[1720px] mx-auto border-t border-[#E9E2E7] py-12 px-6 md:px-10 gap-y-6 flex flex-col">
       <div className="relative w-full flex flex-col gap-y-4">
         <div className="flex justify-between items-center max-md:flex-col max-md:gap-y-10 min-h-[48px]">
           <div className="flex-1 flex gap-x-6 max-md:flex-col gap-y-4 max-md:items-center items-center">

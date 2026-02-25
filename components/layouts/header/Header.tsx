@@ -124,7 +124,7 @@ const Header = () => {
       suppressHydrationWarning
     >
       <div 
-        className="relative container max-w-[1720px] h-[48px] md:h-[64px] flex justify-between mx-auto px-4"
+        className="relative container max-w-[1720px] h-[48px] md:h-[64px] flex justify-between mx-auto px-6 md:px-10"
         suppressHydrationWarning
       >
         <Link

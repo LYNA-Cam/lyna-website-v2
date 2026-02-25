@@ -4,7 +4,7 @@ import Typography from "@/components/ui/Typography";
 const FeaturesSection = () => {
   return (
     <section id="features" className="relative py-12 md:py-20 w-full scroll-mt-20">
-      <div className="relative w-full max-w-[1536px] mx-auto flex flex-col px-4 gap-y-8 md:gap-y-20 items-center justify-center">
+      <div className="relative w-full max-w-[1720px] mx-auto flex flex-col px-6 md:px-10 gap-y-8 md:gap-y-20 items-center justify-center">
         <div className="relative flex flex-col gap-y-2 md:gap-y-4 text-center">
           <Typography
             variant={"subtitle"}

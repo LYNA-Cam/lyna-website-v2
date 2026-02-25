@@ -7,7 +7,7 @@ import { SITE_LINKS } from "@/lib/constants";
 const JoinClubSection = () => {
   return (
     <section className="relative py-20">
-      <div className="flex flex-col items-center justify-center px-4 gap-4 max-w-2xl mx-auto">
+      <div className="flex flex-col items-center justify-center px-6 md:px-10 gap-4 max-w-[1720px] mx-auto">
         <Typography
           as="h2"
           variant={"h2"}

@@ -30,7 +30,7 @@ const UserFeedbackSection = () => {
         </Typography> */}
         <Image src={"/quotes.png"} alt="" width={40} height={40} className="max-md:size-[20px]"/>
       </div>
-      <Carousel className="relative w-full max-w-7xl md:flex items-center hidden">
+      <Carousel className="relative w-full max-w-[1720px] mx-auto md:flex items-center hidden px-6 md:px-10">
         <CarouselPrevious className="static shrink-0"/>
         <CarouselContent>
           <CarouselItem>
@@ -63,7 +63,7 @@ const UserFeedbackSection = () => {
         </CarouselContent>
         <CarouselNext className="static shrink-0"/>
       </Carousel>
-      <Carousel className="relative w-full max-w-7xl flex gap-x-2 justify-between px-4 items-center md:hidden">
+      <Carousel className="relative w-full max-w-[1720px] mx-auto flex gap-x-2 justify-between px-6 md:px-10 items-center md:hidden">
         <CarouselPrevious className="static shrink-0"/>
         <CarouselContent>
           <CarouselItem>
