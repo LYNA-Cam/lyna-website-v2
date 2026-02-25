@@ -2,15 +2,13 @@
 
 import Button from "@/components/ui/Button";
 import Typography from "@/components/ui/Typography";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import Link from "next/link";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect, startTransition } from "react";
 
 import { SITE_LINKS } from "@/lib/constants";
-
-type LINK = { label: string; href: string };
 
 const links = SITE_LINKS.NAV;
 
@@ -62,13 +60,13 @@ const Header = () => {
         >
           {/* Decorative circles - bottom right */}
           <div className="absolute bottom-0 right-0 w-[70%] max-w-md aspect-square pointer-events-none" aria-hidden>
-            <Image src={"/Logo_icon_white 2.png"} alt="" width={350} height={350}/>
+            <OptimizedImage src={"/Logo_icon_white 2.png"} alt="" width={350} height={350}/>
           </div>
 
           {/* Header: logo + close */}
           <div className="relative z-10 flex items-center justify-between px-6 py-5">
             <Link href="/" className="relative h-10 w-[142px]" onClick={() => setMenuOpen(false)}>
-              <Image src="/Logo_primary-big.png" alt="LYNA" fill className="object-contain object-left" />
+              <OptimizedImage src="/Logo_primary-big.png" alt="LYNA" fill className="object-contain object-left" />
             </Link>
             <button
               type="button"
@@ -76,7 +74,7 @@ const Header = () => {
               className="p-2 -m-2 rounded-md text-font hover:bg-font/10 text-2xl font-light leading-none"
               onClick={() => setMenuOpen(false)}
             >
-              <Image src={"/x.svg"} alt="" width={32} height={32}/>
+              <OptimizedImage src={"/x.svg"} alt="" width={32} height={32}/>
             </button>
           </div>
 
@@ -135,7 +133,7 @@ const Header = () => {
           }}
           className="relative h-full w-[140px] md:w-[200px]"
         >
-          <Image
+          <OptimizedImage
             src={"/Logo_primary-big.png"}
             alt=""
             fill
@@ -170,7 +168,7 @@ const Header = () => {
           className="md:hidden p-2 -m-2 rounded-md hover:bg-black/5"
           onClick={() => setMenuOpen(true)}
         >
-          <Image src={"/menu.svg"} alt="" width={24} height={24} />
+          <OptimizedImage src={"/menu.svg"} alt="" width={24} height={24} />
         </button>
       </div>
       {menuPortal}

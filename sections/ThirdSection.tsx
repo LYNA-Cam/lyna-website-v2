@@ -1,5 +1,5 @@
 import Typography from "@/components/ui/Typography";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import React from "react";
 
 const ThirdSection = () => {
@@ -17,7 +17,7 @@ const ThirdSection = () => {
         </span>{" "}
         for every way{" "}
         <span className="flex items-center justify-center gap-x-2">
-          you <Image src={"/logo.svg"} alt="" width={112} height={112} className="max-md:size-[44px]"/> move
+          you <OptimizedImage src={"/logo.svg"} alt="" width={112} height={112} className="max-md:size-[44px]"/> move
         </span>
       </Typography>
     </section>

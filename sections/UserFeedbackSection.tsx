@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/Carousel";
 import Typography from "@/components/ui/Typography";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const UserFeedbackSection = () => {
   return (
@@ -28,7 +28,7 @@ const UserFeedbackSection = () => {
         >
           Early User Feedback
         </Typography> */}
-        <Image src={"/quotes.png"} alt="" width={40} height={40} className="max-md:size-[20px]"/>
+        <OptimizedImage src={"/quotes.png"} alt="" width={40} height={40} className="max-md:size-[20px]"/>
       </div>
       <Carousel className="relative w-full max-w-[1720px] mx-auto md:flex items-center hidden px-6 md:px-10">
         <CarouselPrevious className="static shrink-0"/>

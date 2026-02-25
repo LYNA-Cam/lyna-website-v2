@@ -2,17 +2,19 @@ import Button from "@/components/ui/Button";
 import Typography from "@/components/ui/Typography";
 import Link from "next/link";
 import { SITE_LINKS } from "@/lib/constants";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen w-full flex flex-col gap-y-6">
-      <div
-        style={{
-          backgroundImage: "url(/hero-bg.jpg)",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-        className="absolute inset-0 w-full h-full -rotate-y-180 -z-1 bg-position-[12.5%] md:bg-center"
+      <OptimizedImage
+        src="/hero-bg.jpg"
+        alt=""
+        fill
+        className="object-cover -rotate-y-180 -z-1 brightness-95"
+        priority
+        shimmerWidth={1920}
+        shimmerHeight={1080}
       />
       <div className="relative container mx-auto px-6 md:px-10 mt-24 md:mt-32 gap-y-6 flex flex-col h-max max-w-[1720px]">
         <Typography

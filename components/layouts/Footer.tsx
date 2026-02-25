@@ -2,7 +2,7 @@
 
 import Typography from "../ui/Typography";
 import Link from "next/link";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 import { SITE_LINKS } from "@/lib/constants";
 
@@ -46,7 +46,7 @@ const Footer = () => {
             }}
             className="flex-1 flex justify-center items-center h-full"
           >
-            <Image
+            <OptimizedImage
               src={"/Logo_primary-big.png"}
               alt=""
               width={142}
@@ -61,7 +61,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-center"
             >
-              <Image src={"/instagram.svg"} alt="" width={24} height={24} />
+              <OptimizedImage src={"/instagram.svg"} alt="" width={24} height={24} />
             </Link>
             <Link
               href={SITE_LINKS.TWITTER}
@@ -69,7 +69,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-center"
             >
-              <Image src={"/tiktok.svg"} alt="" width={22} height={24} />
+              <OptimizedImage src={"/tiktok.svg"} alt="" width={22} height={24} />
             </Link>
           </div>
         </div>
@@ -81,7 +81,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <Image
+              <OptimizedImage
                 src="/app_store.svg"
                 alt="Download on the App Store"
                 width={120}
@@ -95,7 +95,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <Image
+              <OptimizedImage
                 src="/google_play.svg"
                 alt="Get it on Google Play"
                 width={135}

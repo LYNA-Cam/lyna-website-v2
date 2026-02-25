@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 import Typography from "@/components/ui/Typography";
 import { SITE_LINKS } from "@/lib/constants";
 import { Metadata } from "next";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import Link from "next/link";
 import React from "react";
 
@@ -28,7 +28,7 @@ const NotFoundPage = () => {
     <div className="min-h-screen py-[60px] px-[100px] w-full">
       <div className="w-full grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col">
-          <Image src={"/Logo_primary-big.png"} alt="" width={240} height={40} />
+          <OptimizedImage src={"/Logo_primary-big.png"} alt="" width={240} height={40} />
           <div className="my-auto">
             <span className="text-font text-[128px] font-lexend font-extralight leading-[120%]">
               404
@@ -61,7 +61,7 @@ const NotFoundPage = () => {
           </div>
         </div>
         <div className="relative aspect-square">
-          <Image src={"/not-found.jpg"} alt="" fill className="object-cover" />
+          <OptimizedImage src={"/not-found.jpg"} alt="" fill className="object-cover" />
         </div>
       </div>
       <footer className="relative mt-[60px] py-4 flex gap-y-4 flex-wrap w-full justify-between before:content-['_'] before:absolute before:inset-0 before:h-px before:bg-linear-to-r before:from-[#c2acfd] before:to-[#f2effa]">
@@ -87,10 +87,10 @@ const NotFoundPage = () => {
         </div>
         <div className="flex items-center gap-x-6 justify-end">
           <Link href={SITE_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer">
-            <Image src={"/instagram.svg"} alt=""  width={20} height={20} />
+            <OptimizedImage src={"/instagram.svg"} alt=""  width={20} height={20} />
           </Link>
           <Link href={SITE_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
-            <Image src={"/tiktok.svg"} alt="" width={20} height={20} />
+            <OptimizedImage src={"/tiktok.svg"} alt="" width={20} height={20} />
           </Link>
         </div>
       </footer>

@@ -9,7 +9,7 @@ import {
   Dots,
 } from "@/components/ui/Carousel";
 import Typography from "@/components/ui/Typography";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const images = [
   "/hero-iphone-1.svg",
@@ -71,7 +71,7 @@ const SecondSection = () => {
                   key={`image-${index}`}
                   className="basis-full justify-center flex"
                 >
-                  <Image src={url} alt="" width={400} height={400} />
+                  <OptimizedImage src={url} alt="" width={400} height={400} />
                 </CarouselItem>
               ))}
             </CarouselContent>
