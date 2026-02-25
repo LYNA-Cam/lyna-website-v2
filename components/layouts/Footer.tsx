@@ -49,10 +49,10 @@ const Footer = () => {
         </Link>
         <div className="flex-1 flex items-center gap-x-6 justify-end max-md:order-1 max-md:mt-6">
           <Link href={SITE_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer">
-            <Image src={"/instagram.svg"} alt="" width={20} height={20} />
+            <Image src={"/instagram.svg"} alt="" width={24} height={24} />
           </Link>
           <Link href={SITE_LINKS.TWITTER} target="_blank" rel="noopener noreferrer">
-            <Image src={"/tiktok.svg"} alt="" width={20} height={20} />
+            <Image src={"/tiktok.svg"} alt="" width={22} height={24} />
           </Link>
         </div>
       </div>
