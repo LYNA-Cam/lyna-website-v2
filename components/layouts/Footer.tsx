@@ -21,9 +21,11 @@ const links: LINK[] = [
 const Footer = () => {
   return (
     <footer className="relative w-full max-w-[1720px] mx-auto border-t border-[#E9E2E7] py-12 px-6 md:px-10 gap-y-6 flex flex-col">
-      <div className="relative w-full flex flex-col gap-y-4">
-        <div className="flex justify-between items-center max-md:flex-col max-md:gap-y-10 min-h-[48px]">
-          <div className="flex-1 flex gap-x-6 max-md:flex-col gap-y-4 max-md:items-center items-center">
+      <div className="relative w-full flex flex-col gap-y-10 md:gap-y-4">
+        {/* Main Footer Row: Pages (on left), Logo (center), Social (right) */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-y-10 md:gap-y-0 min-h-[48px]">
+          {/* Mandatory Pages: Position 1 on Desktop, Position 4 on Mobile */}
+          <div className="flex-1 flex gap-x-6 max-md:flex-col gap-y-4 max-md:items-center items-center order-4 md:order-1">
             {links.map(({ label, href }, index) => (
               <Typography
                 key={`footer-link-${index}`}
@@ -38,13 +40,15 @@ const Footer = () => {
               </Typography>
             ))}
           </div>
+
+          {/* Logo: Position 2 on Desktop, Position 1 on Mobile */}
           <Link
             href="/"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="flex-1 flex justify-center items-center h-full"
+            className="flex-1 flex justify-center items-center h-full order-1 md:order-2"
           >
             <OptimizedImage
               src={"/Logo_primary-big.png"}
@@ -54,7 +58,9 @@ const Footer = () => {
               className="object-contain"
             />
           </Link>
-          <div className="flex-1 flex items-center gap-x-6 justify-end max-md:justify-center h-full">
+
+          {/* Social Icons: Position 3 on Desktop, Position 2 on Mobile */}
+          <div className="flex-1 flex items-center gap-x-6 justify-end max-md:justify-center h-full order-2 md:order-3">
             <Link
               href={SITE_LINKS.INSTAGRAM}
               target="_blank"
@@ -73,8 +79,11 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between items-center max-md:flex-col max-md:gap-y-6">
-          <div className="flex gap-x-4 items-center">
+
+        {/* Bottom Footer Row: Stores (on left), Copyright (on right) */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-y-6 md:gap-y-0 border-t border-[#E9E2E7] md:border-none pt-10 md:pt-0">
+          {/* Store Icons: Position 1 on Desktop, Position 3 on Mobile */}
+          <div className="flex gap-x-4 items-center order-3 md:order-1">
             <Link
               href={SITE_LINKS.APP_STORE}
               target="_blank"
@@ -104,10 +113,11 @@ const Footer = () => {
               />
             </Link>
           </div>
+
           <Typography
             as="p"
             variant={"body-sm"}
-            className="font-lexend font-light text-[#8C8198]"
+            className="font-lexend font-light text-[#8C8198] order-5 md:order-2"
           >
             © <span suppressHydrationWarning>{new Date().getFullYear()}</span>{" "}
             LYNA. All rights reserved.
